@@ -1,0 +1,19 @@
+﻿spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  application:
+    name: spring-cloud-config-server-12581-dev
+---
+spring:
+  profiles: test
+  application:
+    name: spring-cloud-config-server-12581-test
+
+spring:
+  profiles: prod
+  application:
+    name: spring-cloud-config-server-12581-prod
