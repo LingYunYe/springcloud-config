@@ -1,41 +1,20 @@
-﻿spring:
+spring:
   profiles:
     active: dev
 
 ---
-server:
-  port: 10001
-eureka:
-  instance:
-    hostname: 127.0.0.1
-    instance-id: spring-cloud-config-client-10001
-    prefer-ip-address: true
 spring:
   profiles: dev
   application:
-    name: spring-cloud-config-client
-  client:
-    enabled: true
-    register-with-eureka: true # 是否像 eureka 服务注册自己
-    fetch-registry: true # false 表示自己为注册中心,true 表示非注册中心
-    service-url:
-      defaultZone: http://eureka.8090.com:8090/eureka/,http://eureka.8091.com:8091/eureka/,http://eureka.8092.com:8092/eureka/  # 监控页面
-
+    name: spring-cloud-config-server-12581-dev
 ---
 spring:
   profiles: test
   application:
-    name: spring-cloud-config-client
-server:
-  port: 10002
-eureka:
-  instance:
-    hostname: 127.0.0.1
-    instance-id: spring-cloud-config-client-10002
-    prefer-ip-address: true
-  client:
-    enabled: true
-    register-with-eureka: true # 是否像 eureka 服务注册自己
-    fetch-registry: true # false 表示自己为注册中心,true 表示非注册中心
-    service-url:
-      defaultZone: http://eureka.8090.com:8090/eureka/,http://eureka.8091.com:8091/eureka/,http://eureka.8092.com:8092/eureka/  # 监控页面
+    name: spring-cloud-config-server-12581-test
+
+---
+spring:
+  profiles: prod
+  application:
+    name: spring-cloud-config-server-12581-prod
