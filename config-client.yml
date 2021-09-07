@@ -13,6 +13,7 @@ spring:
   application:
     name: spring-cloud-config-server-12581-test
 
+---
 spring:
   profiles: prod
   application:
